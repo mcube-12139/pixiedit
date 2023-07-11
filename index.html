@@ -1,23 +1,64 @@
 <html>
-    <head>
-        <style>
-            #inspector {
-                vertical-align: top;
-                display: inline-block;
-            }
-            .objectProperty:hover {
-                color: blue;
-                cursor: pointer;
-            }
-            .propertyList {
-                margin-left: 16px;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="inspector">
+
+<head>
+    <style>
+        #inspector {
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .object-type {
+            vertical-align: top;
+        }
+
+        .objectProperty:hover {
+            color: blue;
+            cursor: pointer;
+        }
+
+        .propertyList {
+            margin-left: 16px;
+        }
+
+        .caption {
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+            background-color: #c0c0c0;
+        }
+
+        .content {
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+            background-color: #e0e0e0;
+        }
+
+        .assetBlock {
+            display: inline-block;
+            padding: 8px 8px 8px 8px;
+            background-color: #e0e0e0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <span id="appContainer"></span>
+    <div id="inspector">
+        <div id="inspectorCaption" class="caption">Inspector</div>
+        <div id="inspectorContent" class="content">
+            <img src="asset/text.png" />
+            <span class="object-type">PIXI.Text</span><br />
         </div>
-        <script src="pixi.js"></script>
-        <script src="main.js"></script>
-    </body>
+    </div>
+    <div id="asset">
+        <div id="assetCaption" class="caption">Assets</div>
+        <div id="assetContent" class="content">
+        </div>
+    </div>
+    <script src="pixi.js"></script>
+    <script src="main.js"></script>
+</body>
+
 </html>
