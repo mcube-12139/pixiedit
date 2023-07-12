@@ -2,6 +2,19 @@
 
 <head>
     <style>
+        #hierarchy {
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        #appContainer {
+            display: inline-block;
+        }
+
+        .short-input {
+            width: 48px;
+        }
+
         #inspector {
             vertical-align: top;
             display: inline-block;
@@ -11,12 +24,16 @@
             vertical-align: top;
         }
 
-        .objectProperty:hover {
+        .property-name {
+            vertical-align: top;
+        }
+
+        .object-property:hover {
             color: blue;
             cursor: pointer;
         }
 
-        .propertyList {
+        .property-list {
             margin-left: 16px;
         }
 
@@ -44,12 +61,20 @@
 </head>
 
 <body>
-    <span id="appContainer"></span>
+    <div id="hierarchy">
+        <div id="hierarchyCaption" class="caption">Hierarchy</div>
+        <div id="hierarchyContent" class="content">
+            <div><span class="node">▼root</span></div>
+        </div>
+    </div>
+    <span id="appContainer">
+        Grid: <input type="checkbox" id="gridInput" checked="true" />
+        Grid X: <input type="number" id="gridXInput" class="short-input" value="32" />
+        Grid Y: <input type="number" id="gridYInput" class="short-input" value="32" /><br/>
+    </span>
     <div id="inspector">
         <div id="inspectorCaption" class="caption">Inspector</div>
         <div id="inspectorContent" class="content">
-            <img src="asset/text.png" />
-            <span class="object-type">PIXI.Text</span><br />
         </div>
     </div>
     <div id="asset">
